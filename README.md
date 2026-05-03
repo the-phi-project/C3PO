@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [![Visual Studio Code](https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7.svg?logo=vsc&logoColor=white)](#)
 [![Read the Docs](https://img.shields.io/badge/Read%20the%20Docs-8CA1AF?logo=readthedocs&logoColor=fff)](#)
 [![macOS](https://img.shields.io/badge/macOS-000000?logo=apple&logoColor=F0F0F0)](#)
@@ -9,6 +10,9 @@
 [![version](https://img.shields.io/badge/version-0.0.1-blue)](#)
 [![passing](https://img.shields.io/badge/build-passing-green)](#)
 [![testing](https://img.shields.io/badge/coverage-N/A-yellow)](#)
+=======
+# im a bit slammed right now studying for various AP's and finals -- I will be working on all phi project repos a ton over the summer
+>>>>>>> 3ee70e61d03388e429eae12abeb2ab0adc0b801c
 
 # C3PO
 Very small lightweight C++ CLI option parser. Mostly for internal Phi Project usage.
