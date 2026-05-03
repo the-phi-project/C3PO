@@ -1,0 +1,10 @@
+# build artifacts
+_build/*
+compile_commands.json
+*.out
+*.o
+*.dSYM
+
+# executables
+benchmark
+benchmark.exe
