@@ -8,3 +8,6 @@ compile_commands.json
 # executables
 benchmark
 benchmark.exe
+
+main
+main.exr
