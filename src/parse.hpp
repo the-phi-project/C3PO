@@ -54,9 +54,9 @@ bool parse_argument(const std::string& arg, short* result) {
 	}
 
 	if (num >= std::numeric_limits<short>::max() ||
-			num <= std::numeric_limts<short>::min()) return false;
+			num <= std::numeric_limits<short>::min()) return false;
 
-	*result = reinterpret_cast<short>(num);
+	*result = static_cast<short>(num);
 	return true;
 }
 
@@ -90,19 +90,9 @@ bool parse_argument(const std::string& arg, long long* result) {
 	return true;
 }
 
-bool parse_argument(const std::string& arg, ssize_t* result) {
-	try {
-		*result = std::reinterpret_cast<ssize_t>(std::stoll(arg));
-	} catch (...) {
-		return false;
-	}
-	
-	return true;
-}
-
 bool parse_argument(const std::string& arg, size_t* result) {
 	try {
-		*result = std::reinterpret_cast<size_t>(std::stoull(arg));
+		*result = static_cast<size_t>(std::stoull(arg));
 	} catch (...) {
 		return false;
 	}
