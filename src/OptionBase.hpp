@@ -26,19 +26,30 @@ class OptionBase {
 
 		bool takes_value;
 		bool filled;
+		bool required;
 
 	public:
-		OptionBase(const std::string& flag_, const std::string& full_, const std::string& desc_, bool takes_value_) :
-				flag(flag_), full(full_), desc(desc_), takes_value(takes_value_), filled(false) {}
+		OptionBase(const std::string& flag_, const std::string& full_, const std::string& desc_, bool takes_value_, bool required_) :
+				flag(flag_), full(full_), desc(desc_), takes_value(takes_value_), filled(false), required(required_) {}
 
-		virtual ~OptionBase() const = default;
+		virtual ~OptionBase() = default;
 
 		/**/
 
-		virtual void parse(const std::string& arg) = 0;
-		virtual void parse() = 0; // default parser
+		virtual bool parse(const std::string& arg) = 0;
+		void fill() { this->filled = true; }
 
-		virtual bool has_default() const = 0;
+		virtual bool hasDefault() const = 0;
+
+		/**/
+
+		std::string getFull() const { return this->full; }
+		std::string getFlag() const { return this->flag; }
+		std::string getDesc() const { return this->desc; }
+
+		bool takesValue() const { return this->takes_value; }
+		bool isFilled() const { return this->filled; }
+		bool isRequired() const { return this->required; }
 };
 	
 }
